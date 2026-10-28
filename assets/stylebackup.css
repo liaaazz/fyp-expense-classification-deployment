@@ -1,0 +1,624 @@
+
+/* ==========================================
+   1. Main page and sidebar
+   ========================================== */
+
+.stApp,
+[data-testid="stAppViewContainer"],
+[data-testid="stMain"] {
+    background-color: __UI_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+}
+
+[data-testid="stSidebar"],
+[data-testid="stSidebar"] > div {
+    background-color: __SIDEBAR_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+}
+
+[data-testid="stHeader"] {
+    background-color: __UI_BG__ !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, label,
+[data-testid="stMarkdownContainer"],
+[data-testid="stMetricLabel"],
+[data-testid="stMetricValue"],
+[data-testid="stCaptionContainer"] {
+    color: __TEXT_COLOR__;
+}
+
+/* Secondary text */
+[data-testid="stCaptionContainer"],
+[data-testid="stCaptionContainer"] p {
+    color: __MUTED_COLOR__ !important;
+}
+
+/* ==========================================
+   2. Text inputs, text areas and number inputs
+   ========================================== */
+
+[data-testid="stTextInput"] input,
+[data-testid="stTextArea"] textarea,
+[data-testid="stNumberInput"] input,
+[data-testid="stDateInput"] input {
+    background-color: __INPUT_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+    -webkit-text-fill-color: __TEXT_COLOR__ !important;
+    border-color: __BORDER_COLOR__ !important;
+}
+
+[data-testid="stTextInput"] [data-baseweb="input"],
+[data-testid="stTextArea"] [data-baseweb="textarea"],
+[data-testid="stNumberInput"] [data-baseweb="input"],
+[data-testid="stDateInput"] [data-baseweb="input"] {
+    background-color: __INPUT_BG__ !important;
+    border-color: __BORDER_COLOR__ !important;
+}
+
+[data-testid="stTextInput"] input::placeholder,
+[data-testid="stTextArea"] textarea::placeholder {
+    color: __PLACEHOLDER_COLOR__ !important;
+    -webkit-text-fill-color: __PLACEHOLDER_COLOR__ !important;
+}
+
+/* Number input minus and plus buttons */
+[data-testid="stNumberInput"] button {
+    background-color: __HEADER_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+    border-color: __BORDER_COLOR__ !important;
+}
+
+[data-testid="stNumberInput"] button svg {
+    color: __TEXT_COLOR__ !important;
+    fill: currentColor !important;
+}
+
+/* ==========================================
+   3. Selectboxes and expanded dropdown menus
+   ========================================== */
+
+/* Closed selectbox: React Aria structure */
+[data-testid="stSelectbox"] .react-aria-ComboBox [role="group"] {
+    background-color: __INPUT_BG__ !important;
+    border: 1px solid __BORDER_COLOR__ !important;
+    border-radius: 8px !important;
+}
+
+[data-testid="stSelectbox"] .react-aria-ComboBox input[role="combobox"] {
+    background-color: __INPUT_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+    -webkit-text-fill-color: __TEXT_COLOR__ !important;
+}
+
+[data-testid="stSelectbox"] .react-aria-ComboBox button {
+    background-color: __INPUT_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+}
+
+[data-testid="stSelectbox"] .react-aria-ComboBox svg {
+    color: __TEXT_COLOR__ !important;
+    fill: currentColor !important;
+}
+
+/* Closed selectbox: BaseWeb structure */
+div[data-baseweb="select"] > div {
+    background-color: __INPUT_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+    border-color: __BORDER_COLOR__ !important;
+    border-radius: 8px !important;
+}
+
+div[data-baseweb="select"] input {
+    color: __TEXT_COLOR__ !important;
+    -webkit-text-fill-color: __TEXT_COLOR__ !important;
+}
+
+/* Expanded dropdown listbox */
+[role="listbox"] {
+    background-color: __INPUT_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+    border: none !important;
+    outline: none !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12) !important;
+}
+
+
+/* Expanded dropdown popup wrapper */
+[data-testid="stSelectboxVirtualDropdown"] {
+    border: none !important;
+    outline: none !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12) !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+}
+
+
+/* Dropdown options */
+[role="option"] {
+    background-color: __INPUT_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+    border: none !important;
+}
+
+[role="option"]:hover,
+[role="option"][data-focused="true"],
+[role="option"][aria-selected="true"] {
+    background-color: __HOVER_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+}
+
+/* ==========================================
+   4. File uploader
+   ========================================== */
+
+[data-testid="stFileUploader"] section,
+[data-testid="stFileUploader"] [data-testid="stFileUploaderDropzone"] {
+    background-color: __INPUT_BG__ !important;
+    border-color: __BORDER_COLOR__ !important;
+    border-radius: 10px !important;
+}
+
+[data-testid="stFileUploader"] button {
+    background-color: __HEADER_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+    border-color: __BORDER_COLOR__ !important;
+    border-radius: 8px !important;
+}
+
+[data-testid="stFileUploader"] p,
+[data-testid="stFileUploader"] span,
+[data-testid="stFileUploader"] small {
+    color: __TEXT_COLOR__ !important;
+}
+
+/* ==========================================
+   5. Sidebar buttons
+   ========================================== */
+
+[data-testid="stSidebar"] button {
+    background-color: __INPUT_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+    border: 1px solid __BORDER_COLOR__ !important;
+    border-radius: 8px !important;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+[data-testid="stSidebar"] button:hover {
+    background-color: __HOVER_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+}
+
+/* ==========================================
+   6. Download buttons
+   ========================================== */
+
+[data-testid="stDownloadButton"] button {
+    background-color: __INPUT_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+    border: 1px solid __BORDER_COLOR__ !important;
+    border-radius: 8px !important;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+[data-testid="stDownloadButton"] button:hover {
+    background-color: __HOVER_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+    border-color: __TEXT_COLOR__ !important;
+}
+
+/* ==========================================
+   7. Dialogs and warning messages
+   ========================================== */
+
+[data-testid="stDialog"] [role="dialog"],
+[role="dialog"] {
+    background-color: __UI_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+}
+
+[data-testid="stDialog"] [role="dialog"] h1,
+[data-testid="stDialog"] [role="dialog"] h2,
+[data-testid="stDialog"] [role="dialog"] h3,
+[data-testid="stDialog"] [role="dialog"] p,
+[data-testid="stDialog"] [role="dialog"] label,
+[role="dialog"] p {
+    color: __TEXT_COLOR__ !important;
+}
+
+/* Warning and alert boxes */
+[data-testid="stDialog"] [data-testid="stAlert"],
+[data-testid="stAlert"] {
+    color: __ALERT_TEXT__ !important;
+}
+
+[data-testid="stDialog"] [data-testid="stAlert"] p,
+[data-testid="stAlert"] p {
+    color: __ALERT_TEXT__ !important;
+}
+
+/* ==========================================
+   8. Dataframe and table containers
+   ========================================== */
+
+[data-testid="stDataFrame"] {
+    background-color: __UI_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+    border: 1px solid __BORDER_COLOR__ !important;
+    border-radius: 8px !important;
+    overflow: hidden;
+}
+
+[data-testid="stDataFrame"] iframe {
+    background-color: __UI_BG__ !important;
+}
+
+[data-testid="stTable"] {
+    color: __TEXT_COLOR__ !important;
+    border-radius: 8px !important;
+}
+
+
+/* ==========================================
+   9. Global form and popup styling
+   ========================================== */
+
+/* Consistent form container borders */
+[data-testid="stTextInput"] [data-baseweb="input"],
+[data-testid="stTextArea"] [data-baseweb="textarea"],
+[data-testid="stNumberInput"] [data-baseweb="input"],
+[data-testid="stDateInput"] [data-baseweb="input"],
+div[data-baseweb="select"] > div {
+    border: 1px solid __BORDER_COLOR__ !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+/* Text input, textarea and number input surfaces */
+[data-testid="stTextInput"] input,
+[data-testid="stTextArea"] textarea,
+[data-testid="stNumberInput"] input {
+    background-color: __INPUT_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+    -webkit-text-fill-color: __TEXT_COLOR__ !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Date input inner wrappers */
+[data-testid="stDateInput"] div[class*="st-emotion-cache"] {
+    background-color: __INPUT_BG__ !important;
+}
+
+/* Date input outer surface */
+[data-testid="stDateInput"] [data-baseweb="input"],
+[data-testid="stDateInput"] [data-baseweb="base-input"] {
+    background-color: __INPUT_BG__ !important;
+    border: 1px solid __BORDER_COLOR__ !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+}
+
+/* Date text and segments */
+[data-testid="stDateInput"] input,
+[data-testid="stDateInput"] [data-type="literal"],
+[data-testid="stDateInput"] [data-type="segment"] {
+    background-color: transparent !important;
+    color: __TEXT_COLOR__ !important;
+    -webkit-text-fill-color: __TEXT_COLOR__ !important;
+}
+
+/* Consistent input focus */
+[data-testid="stTextInput"] [data-baseweb="input"]:focus-within,
+[data-testid="stTextArea"] [data-baseweb="textarea"]:focus-within,
+[data-testid="stNumberInput"] [data-baseweb="input"]:focus-within,
+[data-testid="stDateInput"] [data-baseweb="input"]:focus-within {
+    border-color: __BORDER_COLOR__ !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Number input buttons */
+[data-testid="stNumberInput"] button {
+    background-color: __HEADER_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+    border-color: __BORDER_COLOR__ !important;
+}
+
+/* Selectbox popup — confirmed working */
+[data-testid="stSelectboxVirtualDropdown"] {
+    border: none !important;
+    outline: none !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12) !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+}
+
+/* Calendar popup — confirmed working */
+[data-testid="stDateInputCalendar"] {
+    background-color: __INPUT_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+    border: 1px solid __BORDER_COLOR__ !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12) !important;
+    overflow: hidden !important;
+}
+
+[data-testid="stDateInputCalendar"] table,
+[data-testid="stDateInputCalendar"] thead,
+[data-testid="stDateInputCalendar"] tbody,
+[data-testid="stDateInputCalendar"] tr,
+[data-testid="stDateInputCalendar"] th,
+[data-testid="stDateInputCalendar"] td {
+    background-color: __INPUT_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+}
+
+[data-testid="stDateInputCalendar"] button {
+    background-color: transparent !important;
+    color: __TEXT_COLOR__ !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+[data-testid="stDateInputCalendar"] button:hover {
+    background-color: __HOVER_BG__ !important;
+}
+
+[data-testid="stDateInputCalendar"] [aria-selected="true"],
+[data-testid="stDateInputCalendar"] [aria-pressed="true"] {
+    background-color: #ff4b4b !important;
+    color: #ffffff !important;
+}
+
+/* Consistent box sizing */
+.stApp *,
+.stApp *::before,
+.stApp *::after {
+    box-sizing: border-box;
+}
+
+
+/* Fix the dark inner wrapper of the date input */
+[data-testid="stDateInput"] div[class*="st-emotion-cache"] {
+    background-color: __INPUT_BG__ !important;
+}
+
+
+/* Fix transaction date text visibility */
+[data-testid="stDateInput"] input,
+[data-testid="stDateInput"] [data-type="literal"],
+[data-testid="stDateInput"] [data-type="segment"],
+[data-testid="stDateInput"] [role="spinbutton"],
+[data-testid="stDateInput"] [contenteditable="true"] {
+    color: __TEXT_COLOR__ !important;
+    -webkit-text-fill-color: __TEXT_COLOR__ !important;
+    opacity: 1 !important;
+    caret-color: __TEXT_COLOR__ !important;
+}
+
+/* Keep date text visible inside generated wrappers */
+[data-testid="stDateInput"] div[class*="st-emotion-cache"] * {
+    -webkit-text-fill-color: __TEXT_COLOR__ !important;
+}
+
+/* Preserve the selected date highlight in the calendar */
+[data-testid="stDateInputCalendar"] [aria-selected="true"],
+[data-testid="stDateInputCalendar"] [aria-selected="true"] * {
+    background-color: #ff4b4b !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+
+/* =========================================
+   CONSISTENT BORDERS FOR ALL FORM FIELDS
+   ========================================= */
+
+/* Merchant, purchased items, and total amount */
+[data-testid="stTextInput"] [data-baseweb="input"],
+[data-testid="stTextArea"] [data-baseweb="textarea"],
+[data-testid="stNumberInput"] [data-baseweb="input"],
+[data-testid="stNumberInput"] [data-baseweb="base-input"] {
+    border: 1px solid __BORDER_COLOR__ !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Merchant and amount input text */
+[data-testid="stTextInput"] input,
+[data-testid="stNumberInput"] input {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Purchased Items textarea */
+[data-testid="stTextArea"] textarea {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    resize: vertical;
+}
+
+/* Number input buttons */
+[data-testid="stNumberInput"] button {
+    border-color: __BORDER_COLOR__ !important;
+    box-shadow: none !important;
+}
+
+/* Prevent thicker borders when fields are focused */
+[data-testid="stTextInput"] [data-baseweb="input"]:focus-within,
+[data-testid="stTextArea"] [data-baseweb="textarea"]:focus-within,
+[data-testid="stNumberInput"] [data-baseweb="input"]:focus-within {
+    border: 1px solid __BORDER_COLOR__ !important;
+    box-shadow: none !important;
+}
+
+/* =========================================
+   FORM FIELDS — CLEAN, SOFT SHADOW
+   ========================================= */
+
+/* Remove thick borders from the confirmed root elements */
+[data-testid="stTextInputRootElement"],
+[data-testid="stTextAreaRootElement"],
+[data-testid="stNumberInputContainer"] {
+    border: none !important;
+    outline: none !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+    border-radius: 8px !important;
+    background: __INPUT_BG__ !important;
+}
+
+/* Remove borders from all nested wrappers */
+[data-testid="stTextInputRootElement"] *,
+[data-testid="stTextAreaRootElement"] *,
+[data-testid="stNumberInputContainer"] * {
+    border-top: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    outline: none !important;
+}
+
+/* Keep the actual input surfaces theme-aware */
+[data-testid="stTextInputRootElement"] input,
+[data-testid="stTextAreaRootElement"] textarea,
+[data-testid="stNumberInputContainer"] input {
+    background: __INPUT_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+    -webkit-text-fill-color: __TEXT_COLOR__ !important;
+    box-shadow: none !important;
+}
+
+/* Restore the number control divider and button styling */
+[data-testid="stNumberInputContainer"] button {
+    background: __HEADER_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+    border: none !important;
+}
+
+/* Subtle focus feedback */
+[data-testid="stTextInputRootElement"]:focus-within,
+[data-testid="stTextAreaRootElement"]:focus-within,
+[data-testid="stNumberInputContainer"]:focus-within {
+    box-shadow: 0 0 0 2px rgba(128, 128, 128, 0.22) !important;
+}
+
+/* =========================================
+   MATCHED SHADOWS FOR ALL FORM FIELDS
+   ========================================= */
+
+/* Purchased Items textarea */
+[data-testid="stTextAreaRootElement"] {
+    border: none !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+    overflow: hidden !important;
+}
+
+/* Transaction Date input */
+[data-testid="stDateInput"] {
+    border: none !important;
+    border-radius: 8px !important;
+}
+
+/* Date input's visible inner container */
+[data-testid="stDateInput"] > div,
+[data-testid="stDateInput"] [data-baseweb="input"],
+[data-testid="stDateInput"] [data-baseweb="base-input"] {
+    border: none !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+    background-color: __INPUT_BG__ !important;
+}
+
+/* Prevent focus from restoring a heavy border */
+[data-testid="stDateInput"]:focus-within > div,
+[data-testid="stDateInput"] [data-baseweb="input"]:focus-within,
+[data-testid="stDateInput"] [data-baseweb="base-input"]:focus-within {
+    border: none !important;
+    box-shadow: 0 0 0 2px rgba(128, 128, 128, 0.22) !important;
+}
+
+/* =========================================
+   PURCHASED ITEMS — MATCH THE SOFT SHADOW
+   ========================================= */
+
+[data-testid="stTextAreaRootElement"] {
+    border: none !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+}
+
+[data-testid="stTextAreaRootElement"] textarea {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: __INPUT_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+}
+
+
+/* =========================================
+   TRANSACTION DATE — REMOVE THE INSET BORDER
+   ========================================= */
+
+[data-testid="stDateInputField"] {
+    border: none !important;
+    outline: none !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+    border-radius: 8px !important;
+    background-color: __INPUT_BG__ !important;
+}
+
+/* Keep the date text readable */
+[data-testid="stDateInputField"] input,
+[data-testid="stDateInputField"] [data-type="literal"],
+[data-testid="stDateInputField"] [data-type="segment"] {
+    color: __TEXT_COLOR__ !important;
+    -webkit-text-fill-color: __TEXT_COLOR__ !important;
+}
+
+/* Keep focus styling subtle */
+[data-testid="stDateInputField"]:focus-within {
+    border: none !important;
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(128, 128, 128, 0.22) !important;
+}
+
+
+/* Purchased Items — visible shadow around the entire textbox */
+[data-testid="stTextAreaRootElement"] {
+    border: none !important;
+    border-radius: 8px !important;
+    overflow: visible !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.14) !important;
+    background: __INPUT_BG__ !important;
+}
+
+/* Keep the inner textarea clean */
+[data-testid="stTextAreaRootElement"] textarea {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    border-radius: 8px !important;
+    background: __INPUT_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+    -webkit-text-fill-color: __TEXT_COLOR__ !important;
+}
+
+/* Slightly stronger shadow on focus */
+[data-testid="stTextAreaRootElement"]:focus-within {
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.18) !important;
+}

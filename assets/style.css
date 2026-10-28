@@ -1,0 +1,581 @@
+
+/* =========================================================
+   EXPENSE TRACKER — CONSOLIDATED STYLESHEET
+   Compatible with the theme placeholders in app.py
+   ========================================================= */
+
+
+/* 1. MAIN PAGE, SIDEBAR AND TYPOGRAPHY */
+
+.stApp,
+[data-testid="stAppViewContainer"],
+[data-testid="stMain"] {
+    background-color: __UI_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+}
+
+[data-testid="stSidebar"],
+[data-testid="stSidebar"] > div {
+    background-color: __SIDEBAR_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+}
+
+[data-testid="stHeader"] {
+    background-color: __UI_BG__ !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, label,
+[data-testid="stMarkdownContainer"],
+[data-testid="stMetricLabel"],
+[data-testid="stMetricValue"] {
+    color: __TEXT_COLOR__;
+}
+
+[data-testid="stCaptionContainer"],
+[data-testid="stCaptionContainer"] p {
+    color: __MUTED_COLOR__ !important;
+}
+
+
+/* 2. INPUT TEXT AND PLACEHOLDERS */
+
+[data-testid="stTextInput"] input,
+[data-testid="stTextArea"] textarea,
+[data-testid="stNumberInput"] input {
+    background-color: __INPUT_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+    -webkit-text-fill-color: __TEXT_COLOR__ !important;
+}
+
+[data-testid="stTextInput"] input::placeholder,
+[data-testid="stTextArea"] textarea::placeholder {
+    color: __PLACEHOLDER_COLOR__ !important;
+    -webkit-text-fill-color: __PLACEHOLDER_COLOR__ !important;
+}
+
+
+/* 3. MERCHANT, PURCHASED ITEMS AND TOTAL AMOUNT */
+
+/* Merchant / Store Name */
+[data-testid="stTextInputRootElement"] {
+    border: none !important;
+    outline: none !important;
+    border-radius: 8px !important;
+    background: __INPUT_BG__ !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+}
+
+[data-testid="stTextInputRootElement"] input {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: __INPUT_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+    -webkit-text-fill-color: __TEXT_COLOR__ !important;
+}
+
+
+/* =========================================
+   PURCHASED ITEMS — FULL OUTER SHADOW
+   ========================================= */
+
+/* Outer wrapper around the textarea */
+[data-testid="stTextArea"] {
+    overflow: visible !important;
+    filter: none !important;
+}
+
+/* Actual textarea wrapper */
+[data-testid="stTextAreaRootElement"] {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: visible !important;
+    border: none !important;
+    border-radius: 8px !important;
+    background: __INPUT_BG__ !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12) !important;
+    filter: none !important;
+}
+
+/* Text area itself */
+[data-testid="stTextAreaRootElement"] textarea {
+    display: block !important;
+    width: 100% !important;
+    border: none !important;
+    outline: none !important;
+    border-radius: 8px !important;
+    background: __INPUT_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+    -webkit-text-fill-color: __TEXT_COLOR__ !important;
+    box-shadow: none !important;
+    filter: none !important;
+}
+
+/* Subtle focus shadow */
+[data-testid="stTextAreaRootElement"]:focus-within {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16) !important;
+}
+
+/* Total Amount */
+[data-testid="stNumberInputContainer"] {
+    border: none !important;
+    outline: none !important;
+    border-radius: 8px !important;
+    background: __INPUT_BG__ !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+}
+
+[data-testid="stNumberInputContainer"] input {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: __INPUT_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+    -webkit-text-fill-color: __TEXT_COLOR__ !important;
+}
+
+/* Number input buttons */
+[data-testid="stNumberInput"] button,
+[data-testid="stNumberInputContainer"] button {
+    background-color: __HEADER_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+    border-color: __BORDER_COLOR__ !important;
+    box-shadow: none !important;
+}
+
+[data-testid="stNumberInput"] button svg {
+    color: __TEXT_COLOR__ !important;
+    fill: currentColor !important;
+}
+
+/* Subtle focus feedback */
+[data-testid="stTextInputRootElement"]:focus-within,
+[data-testid="stNumberInputContainer"]:focus-within {
+    box-shadow: 0 0 0 2px rgba(128, 128, 128, 0.22) !important;
+}
+
+
+/* 4. TRANSACTION DATE INPUT */
+
+[data-testid="stDateInputField"] {
+    border: none !important;
+    outline: none !important;
+    border-radius: 8px !important;
+    background-color: __INPUT_BG__ !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Date text visibility */
+[data-testid="stDateInput"] input,
+[data-testid="stDateInput"] [data-type="literal"],
+[data-testid="stDateInput"] [data-type="segment"],
+[data-testid="stDateInput"] [role="spinbutton"],
+[data-testid="stDateInput"] [contenteditable="true"],
+[data-testid="stDateInputField"] input,
+[data-testid="stDateInputField"] [data-type="literal"],
+[data-testid="stDateInputField"] [data-type="segment"] {
+    color: __TEXT_COLOR__ !important;
+    -webkit-text-fill-color: __TEXT_COLOR__ !important;
+    opacity: 1 !important;
+    caret-color: __TEXT_COLOR__ !important;
+}
+
+/* Date input inner wrappers */
+[data-testid="stDateInput"] div[class*="st-emotion-cache"] {
+    background-color: __INPUT_BG__ !important;
+}
+
+[data-testid="stDateInput"] [data-baseweb="input"],
+[data-testid="stDateInput"] [data-baseweb="base-input"] {
+    background-color: __INPUT_BG__ !important;
+    border-radius: 8px !important;
+}
+
+/* Date field focus */
+[data-testid="stDateInputField"]:focus-within {
+    border: none !important;
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(128, 128, 128, 0.22) !important;
+}
+
+
+/* 5. CALENDAR POPUP */
+
+[data-testid="stDateInputCalendar"] {
+    background-color: __INPUT_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+    border: 1px solid __BORDER_COLOR__ !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12) !important;
+    overflow: hidden !important;
+}
+
+[data-testid="stDateInputCalendar"] table,
+[data-testid="stDateInputCalendar"] thead,
+[data-testid="stDateInputCalendar"] tbody,
+[data-testid="stDateInputCalendar"] tr,
+[data-testid="stDateInputCalendar"] th,
+[data-testid="stDateInputCalendar"] td {
+    background-color: __INPUT_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+}
+
+[data-testid="stDateInputCalendar"] button {
+    background-color: transparent !important;
+    color: __TEXT_COLOR__ !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+[data-testid="stDateInputCalendar"] button:hover {
+    background-color: __HOVER_BG__ !important;
+}
+
+/* Selected date */
+[data-testid="stDateInputCalendar"] [aria-selected="true"],
+[data-testid="stDateInputCalendar"] [aria-pressed="true"],
+[data-testid="stDateInputCalendar"] [aria-selected="true"] * {
+    background-color: #ff4b4b !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+}
+
+
+/* 6. SELECTBOXES AND DROPDOWNS */
+
+/* React Aria selectbox */
+[data-testid="stSelectbox"] .react-aria-ComboBox [role="group"] {
+    background-color: __INPUT_BG__ !important;
+    border: 1px solid __BORDER_COLOR__ !important;
+    border-radius: 8px !important;
+}
+
+[data-testid="stSelectbox"] .react-aria-ComboBox input[role="combobox"] {
+    background-color: __INPUT_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+    -webkit-text-fill-color: __TEXT_COLOR__ !important;
+}
+
+[data-testid="stSelectbox"] .react-aria-ComboBox button {
+    background-color: __INPUT_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+}
+
+[data-testid="stSelectbox"] .react-aria-ComboBox svg {
+    color: __TEXT_COLOR__ !important;
+    fill: currentColor !important;
+}
+
+/* BaseWeb selectbox */
+div[data-baseweb="select"] > div {
+    background-color: __INPUT_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+    border: 1px solid __BORDER_COLOR__ !important;
+    border-radius: 8px !important;
+}
+
+div[data-baseweb="select"] input {
+    color: __TEXT_COLOR__ !important;
+    -webkit-text-fill-color: __TEXT_COLOR__ !important;
+}
+
+/* Expanded dropdown */
+[role="listbox"] {
+    background-color: __INPUT_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+    border: none !important;
+    outline: none !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Confirmed working popup wrapper */
+[data-testid="stSelectboxVirtualDropdown"] {
+    border: none !important;
+    outline: none !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12) !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+}
+
+[role="option"] {
+    background-color: __INPUT_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+    border: none !important;
+}
+
+[role="option"]:hover,
+[role="option"][data-focused="true"],
+[role="option"][aria-selected="true"] {
+    background-color: __HOVER_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+}
+
+
+/* 7. FILE UPLOADER */
+
+[data-testid="stFileUploader"] section,
+[data-testid="stFileUploader"] [data-testid="stFileUploaderDropzone"] {
+    background-color: __INPUT_BG__ !important;
+    border-color: __BORDER_COLOR__ !important;
+    border-radius: 10px !important;
+}
+
+[data-testid="stFileUploader"] button {
+    background-color: __HEADER_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+    border-color: __BORDER_COLOR__ !important;
+    border-radius: 8px !important;
+}
+
+[data-testid="stFileUploader"] p,
+[data-testid="stFileUploader"] span,
+[data-testid="stFileUploader"] small {
+    color: __TEXT_COLOR__ !important;
+}
+
+
+/* 8. SIDEBAR AND DOWNLOAD BUTTONS */
+
+[data-testid="stSidebar"] button,
+[data-testid="stDownloadButton"] button {
+    background-color: __INPUT_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+    border: 1px solid __BORDER_COLOR__ !important;
+    border-radius: 8px !important;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+[data-testid="stSidebar"] button:hover,
+[data-testid="stDownloadButton"] button:hover {
+    background-color: __HOVER_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+}
+
+[data-testid="stDownloadButton"] button:hover {
+    border-color: __TEXT_COLOR__ !important;
+}
+
+
+/* 9. DIALOGS, WARNINGS AND ALERTS */
+
+[data-testid="stDialog"] [role="dialog"],
+[role="dialog"] {
+    background-color: __UI_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+}
+
+[data-testid="stDialog"] [role="dialog"] h1,
+[data-testid="stDialog"] [role="dialog"] h2,
+[data-testid="stDialog"] [role="dialog"] h3,
+[data-testid="stDialog"] [role="dialog"] p,
+[data-testid="stDialog"] [role="dialog"] label,
+[role="dialog"] p {
+    color: __TEXT_COLOR__ !important;
+}
+
+[data-testid="stDialog"] [data-testid="stAlert"],
+[data-testid="stAlert"],
+[data-testid="stDialog"] [data-testid="stAlert"] p,
+[data-testid="stAlert"] p {
+    color: __ALERT_TEXT__ !important;
+}
+
+
+/* 10. DATAFRAMES AND TABLES */
+
+[data-testid="stDataFrame"] {
+    background-color: __UI_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+    border: 1px solid __BORDER_COLOR__ !important;
+    border-radius: 8px !important;
+    overflow: hidden;
+}
+
+[data-testid="stDataFrame"] iframe {
+    background-color: __UI_BG__ !important;
+}
+
+[data-testid="stTable"] {
+    color: __TEXT_COLOR__ !important;
+    border-radius: 8px !important;
+}
+
+
+/* 11. GLOBAL SIZING AND TRANSITIONS */
+
+.stApp *,
+.stApp *::before,
+.stApp *::after {
+    box-sizing: border-box;
+}
+
+[data-testid="stTextInputRootElement"],
+[data-testid="stTextAreaRootElement"],
+[data-testid="stNumberInputContainer"],
+[data-testid="stDateInputField"] {
+    transition: box-shadow 0.2s ease,
+                background-color 0.2s ease;
+}
+
+/* =========================================
+   RADIO BUTTONS — TARGET VISIBLE CIRCLE
+   ========================================= */
+
+/* Unselected radio circle */
+[data-testid="stRadioOption"] div.st-emotion-cache-i211h4 {
+    background-color: __INPUT_BG__ !important;
+    border: 1.5px solid __BORDER_COLOR__ !important;
+    border-radius: 50% !important;
+    box-shadow: none !important;
+}
+
+/* Selected radio circle */
+[data-testid="stRadioOption"]:has(input[type="radio"]:checked)
+div.st-emotion-cache-i211h4 {
+    background-color: #ff4b4b !important;
+    border-color: #ff4b4b !important;
+}
+
+/* Radio label text */
+[data-testid="stRadioOption"] {
+    color: __TEXT_COLOR__ !important;
+}
+
+/* Keyboard focus */
+[data-testid="stRadioOption"]:has(input[type="radio"]:focus-visible)
+div.st-emotion-cache-i211h4 {
+    outline: 2px solid #ff4b4b !important;
+    outline-offset: 3px !important;
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+/* Primary Streamlit buttons */
+[data-testid="stBaseButton-primary"] {
+    background-color: #ff4b4b !important;
+    color: #ffffff !important;
+    border: 1px solid #ff4b4b !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08) !important;
+    transition: background-color 0.2s ease,
+                box-shadow 0.2s ease,
+                transform 0.2s ease;
+}
+
+/* Primary button text and icons */
+[data-testid="stBaseButton-primary"] * {
+    color: #ffffff !important;
+    fill: currentColor !important;
+}
+
+/* Primary button hover */
+[data-testid="stBaseButton-primary"]:hover {
+    background-color: #e63e3e !important;
+    border-color: #e63e3e !important;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.14) !important;
+    transform: translateY(-1px);
+}
+
+/* Secondary buttons */
+[data-testid="stBaseButton-secondary"] {
+    background-color: __INPUT_BG__ !important;
+    color: __TEXT_COLOR__ !important;
+    border: 1px solid __BORDER_COLOR__ !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06) !important;
+    transition: background-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+/* Secondary button text */
+[data-testid="stBaseButton-secondary"] * {
+    color: __TEXT_COLOR__ !important;
+}
+
+/* Secondary button hover */
+[data-testid="stBaseButton-secondary"]:hover {
+    background-color: __HOVER_BG__ !important;
+    border-color: __BORDER_COLOR__ !important;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Disabled buttons */
+[data-testid="stBaseButton-primary"]:disabled,
+[data-testid="stBaseButton-secondary"]:disabled {
+    opacity: 0.55 !important;
+    cursor: not-allowed !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* Buttons inside dialogs */
+[data-testid="stDialog"] [data-testid="stBaseButton-primary"],
+[data-testid="stDialog"] [data-testid="stBaseButton-secondary"] {
+    border-radius: 8px !important;
+}
+
+
+/* =========================================
+   CHECKBOX — STREAMLIT REACT ARIA
+   ========================================= */
+
+/* Checkbox square */
+[data-testid="stCheckbox"] label > div.st-emotion-cache-49vfsy {
+    background-color: __INPUT_BG__ !important;
+    border: 1.5px solid __BORDER_COLOR__ !important;
+    border-radius: 5px !important;
+    box-shadow: none !important;
+}
+
+/* Checked checkbox */
+[data-testid="stCheckbox"] label:has(
+    input[type="checkbox"]:checked
+) > div.st-emotion-cache-49vfsy {
+    background-color: #ff4b4b !important;
+    border-color: #ff4b4b !important;
+}
+
+/* Label text */
+[data-testid="stCheckbox"] label {
+    color: __TEXT_COLOR__ !important;
+}
+
+/* =========================================
+   SIDEBAR TOGGLE — VISIBLE ARROW
+   ========================================= */
+
+/* Keep the existing toggle button styling */
+[data-testid="stSidebarCollapseButton"] button {
+    background-color: __INPUT_BG__ !important;
+    border: 1px solid __BORDER_COLOR__ !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+}
+
+/* Target Streamlit's actual Material icon */
+[data-testid="stSidebarCollapseButton"] [data-testid="stIconMaterial"] {
+    color: __TEXT_COLOR__ !important;
+    -webkit-text-fill-color: __TEXT_COLOR__ !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    font-size: 24px !important;
+}
+
+/* Make sure the icon's nested spans inherit the colour */
+[data-testid="stSidebarCollapseButton"] [data-testid="stIconMaterial"] span {
+    color: __TEXT_COLOR__ !important;
+    -webkit-text-fill-color: __TEXT_COLOR__ !important;
+    opacity: 1 !important;
+}
+
+/* Hover */
+[data-testid="stSidebarCollapseButton"] button:hover {
+    background-color: __HOVER_BG__ !important;
+}

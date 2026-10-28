@@ -1,0 +1,12 @@
+apikey.env
+.env
+.streamlit/secrets.toml
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.db
+*.sqlite
+*.sqlite3
+data/
+backups/
